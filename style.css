@@ -1,0 +1,1131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(imagens/backteste2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  background: linear-gradient(120deg, #000000, orange);
+  font-family:Arial, Helvetica, sans-serif;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botaoinv {
+  justify-content: center;
+}
+
+.botao-inv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+footer {
+  background: fixed black;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit:contain;
+}
+
+.logo-text h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.logo-text p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.banner {
+  padding: 8rem 0;
+  background-image:url(imagens/BNQEsporte-logo.png) ;
+  background-repeat:repeat;
+  background-attachment: scroll;
+  background-size:contain;
+  background-position: center;
+  border: solid black;
+  position: relative;
+}
+
+.banner-br {
+  padding: 8rem 0;
+  background-image: url(imagens/brasileirao-logo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-nba {
+  padding: 8rem 0;
+  background-image: url(imagens/nbalogof.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  background-position: center;
+}
+
+/* cards-noticia */
+.artigos {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+}
+
+.artigos h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.artigos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artigo-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artigo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.artigo-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.artigo-info {
+  padding: 20px;
+}
+
+.artigo-info .categoria {
+  display: inline-block;
+  background-color: #cc8425;
+  color:black;
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.artigo-info h3 {
+  font-size: 1.3rem;
+  margin: 10px 0;
+  color: #333;
+  line-height: 1.4;
+}
+
+.artigo-info .data {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.artigo-info .descricao {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.artigo-info .btn-primary {
+  display: inline-block;
+  background-color: #cc8425;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.artigo-info .btn-primary:hover {
+  background-color: #cc8425;
+}
+
+/*clube de assinatura */
+.clube-assinatura {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #0f0f0f 0%, #cc8425 100%);
+  color: white;
+}
+
+.clube-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.clube-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.clube-text p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+.beneficios li {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  padding-left: 0;
+}
+
+.btn-premium {
+  background-color: #ff6a07;
+  color: #333;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  margin-top: 15px;
+}
+
+.btn-premium:hover {
+  background-color: #ffb300;
+  transform: scale(1.05);
+}
+
+.clube-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+}
+
+/*Tabela brasileirao */
+
+.tabelabr {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.tabelatitulo {
+  background: #000000;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  
+}
+
+.tabelabrpos {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabelabrpos thead {
+  background: #f8f8f8;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabelabrpos th {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: #333;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.tabelabrpos th.pos,
+.tabelabrpos th.club {
+  text-align: left;
+}
+
+.tabelabrpos td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tabelabrpos td.pos {
+  text-align: left;
+  font-weight: 600;
+  color: #666;
+  width: 40px;
+}
+
+.tabelabrpos td.club {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+}
+
+.tabelabrpos td.numero-tabela {
+  color: #666;
+}
+
+.tabelabrpos td.numero-tabela.bold {
+  font-weight: 700;
+  color: #000;
+}
+
+/* Cores de classificação*/
+
+.tabelabrpos tbody tr.libertadores {
+  background-color: #57a8e2;
+}
+
+.tabelabrpos tbody tr.libertadores:hover {
+  background-color: #bbdefb;
+}
+
+.tabelabrpos tbody tr.preliberta {
+  background-color: #ffe0b2;
+}
+
+.tabelabrpos tbody tr.preliberta:hover {
+  background-color: #ffd699;
+}
+
+.tabelabrpos tbody tr.sulamericana {
+  background-color: #c8e6c9;
+}
+
+.tabelabrpos tbody tr.sulamericana:hover {
+  background-color: #a5d6a7;
+}
+
+.tabelabrpos tbody tr.zona-rebaixamento {
+  background-color: #f58a95;
+}
+
+.tabelabrpos tbody tr.zona-rebaixamento:hover {
+  background-color: #ef9a9a;
+}
+
+.tabelabrpos tbody tr {
+  background-color: white;
+}
+
+.tabelabrpos tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* legenda */
+.legenda-tabela {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  justify-content: center;
+}
+
+.legenda1{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legenda-cor {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.legenda-azul {
+  background-color: #57a8e2;
+}
+
+.legenda-laranja {
+  background-color: #ffe0b2;
+}
+
+.legenda-verde {
+  background-color: #c8e6c9;
+}
+
+.legenda-vermelho {
+  background-color: #f38994;
+}
+
+.legenda-texto {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* tabela-nba */
+
+.titulo-nba{
+  background: #000000;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* legenda */
+.legenda {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.item-legenda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.cor-legenda {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.cor-azul {
+  background-color: #1565c0;
+}
+
+.cor-laranja {
+  background-color: #f39e00;
+}
+
+.cor-vermelho {
+  background-color: #c62828;
+}
+
+.conferencias {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.conferencia {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.conferencia h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.tabela-classificacao {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-classificacao thead {
+  background-color: #f0f0f0;
+}
+
+.tabela-classificacao th {
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+}
+
+.tabela-classificacao td {
+  padding: 12px 8px;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Playoff - azul */
+.tabela-classificacao tbody tr.playoff {
+  background-color: #e3f2fd;
+}
+
+.tabela-classificacao tbody tr.playoff:hover {
+  background-color: #94ccfa;
+}
+
+.tabela-classificacao tbody tr.playoff td:first-child {
+  color: #1565c0;
+  font-weight: 700;
+}
+
+/* Play-in - laranja */
+
+.tabela-classificacao tbody tr.play-in:hover {
+  background-color: #f7c06e;
+}
+
+.tabela-classificacao tbody tr.play-in td:first-child {
+  color: #f39e00;
+  font-weight: 700;
+}
+
+/* Lottery - vermelho */
+.tabela-classificacao tbody tr.loteria {
+  background-color: #ffebee;
+}
+
+.tabela-classificacao tbody tr.loteria:hover {
+  background-color: #ffa7b0;
+}
+
+.tabela-classificacao tbody tr.loteria td:first-child {
+  color: #c62828;
+  font-weight: 700;
+}
+
+.tabela-classificacao tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* formulario-clube */
+.secao-formulario {
+  padding: 60px 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.container-formulario {
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-header {
+  background: #000000;
+  color: white;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.formulario-header h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.formulario-header p {
+  color:white;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.formulario-inscricao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.grupo-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.campo input[type="text"],
+.campo input[type="email"],
+.campo input[type="tel"],
+.campo input[type="date"],
+select {
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: inherit;
+}
+
+.campo input[type="text"]:focus,
+.campo input[type="email"]:focus,
+.campo input[type="tel"]:focus,
+.campo input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #cc8425;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* seção de plano */
+.secao-plano {
+  margin-top: 30px;
+}
+
+.secao-plano h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.opcoes-plano {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.plano-opcao {
+  cursor: pointer;
+}
+
+.plano-opcao input[type="radio"] {
+  display: none;
+}
+
+.plano-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s;
+  position: relative;
+  background: white;
+}
+
+.plano-opcao input[type="radio"]:checked + .plano-card {
+  border-color: #cc8425;
+  background-color: #f0f4ff;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.plano-nome {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.plano-preco {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #cc8425;
+  margin: 8px 0;
+}
+
+.plano-periodo {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.plano-destaque {
+  border-color: #000000;
+  background-color: #fffbf0;
+}
+
+.plano-opcao input[type="radio"]:checked + .plano-destaque {
+  border-color: #ffc107;
+  background-color: #fffbf0;
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+}
+
+.etiqueta-desconto {
+  position: absolute;
+  top: -10px;
+  background-color: #ffc107;
+  color: #333;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* seção de pagamento */
+.secao-pagamento {
+  margin-top: 30px;
+}
+
+.secao-pagamento h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.opcoes-pagamento {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pagamento-opcao {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pagamento-opcao:hover {
+  border-color: #cc8425;
+  background-color: #f9fafb;
+}
+
+.pagamento-opcao input[type="radio"] {
+  margin-right: 12px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  accent-color: #cc8425;
+}
+
+.pagamento-opcao span {
+  font-weight: 500;
+  color: #333;
+}
+
+/* checkbox */
+.campo-checkbox {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.campo-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  cursor: pointer;
+  accent-color: #cc8425;
+  flex-shrink: 0;
+}
+
+.campo-checkbox label {
+  margin: 0;
+  font-weight: 400;
+  cursor: pointer;
+  line-height: 1.5;
+}
+
+.campo-checkbox a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.campo-checkbox a:hover {
+  color: #cc8425;
+}
+
+/* Botão de envio */
+.botao-enviar {
+  background: linear-gradient(135deg, #000000 0%, #cc8425 100%);
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+  margin-top: 15px;
+}
+
+.botao-enviar:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.botao-enviar:active {
+  transform: translateY(0);
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navbar {
+    justify-content: center;
+    gap: 5px;
+    order: 3;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .artigos h2 {
+    font-size: 2rem;
+  }
+
+  .artigos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .clube-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .clube-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .clube-image img {
+    max-width: 100%;
+  }
+
+  .conferencias {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .conferencia {
+    padding: 15px;
+  }
+
+  .tabela-classificacao th,
+  .tabela-classificacao td {
+    padding: 8px 4px;
+    font-size: 12px;
+  }
+
+  .grupo-campos {
+    grid-template-columns: 1fr;
+  }
+
+  .opcoes-plano {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+  }
+
+  .plano-card {
+    padding: 15px;
+  }
+
+  .container-formulario {
+    padding: 25px;
+  }
+
+  .formulario-header {
+    margin: -25px -25px 20px -25px;
+  }
+
+  .formulario-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .tabelatitulo,
+  .titulo-nba {
+    font-size: 1.5rem;
+    padding: 15px;
+  }
+
+  .artigo-card img {
+    height: 180px;
+  }
+}
+
+/* mobile */
+@media (max-width: 480px) {
+  header {
+    padding: 0.5rem 0;
+  }
+
+  .logo {
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo div h1 {
+    font-size: 1.3rem;
+  }
+
+  .logo div p {
+    font-size: 0.8rem;
+  }
+
+  .navbar {
+    gap: 3px;
+  }
+
+  .navbar a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .banner,
+  .banner-br,
+  .banner-nba {
+    padding: 4rem 0;
+  }
+
+  .artigos {
+    padding: 30px 15px;
+  }
+
+  .artigos h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .artigo-info {
+    padding: 15px;
+  }
+
+  .artigo-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .artigo-card img {
+    height: 150px;
+  }
+
+  .clube-assinatura {
+    padding: 30px 15px;
+  }
+
+  .clube-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .clube-text p {
+    font-size: 0.95rem;
+  }
+
+  .beneficios li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .btn-premium {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  .conferencia {
+    padding: 10px;
+  }
+
+  .conferencia h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .tabela-classificacao th,
+  .tabela-classificacao td {
+    padding: 6px 2px;
+    font-size: 11px;
+  }
+
+  .tabelatitulo,
+  .titulo-nba {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+
+  .legenda {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .item-legenda {
+    font-size: 12px;
+    gap: 5px;
+  }
+
+  .cor-legenda {
+    width: 16px;
+    height: 16px;
+  }
+
+  .legenda-cor {
+    width: 18px;
+    height: 18px;
+  }
+
+  .secao-formulario {
+    padding: 30px 15px;
+  }
+
+  .container-formulario {
+    padding: 20px;
+  }
+
+  .formulario-header {
+    margin: -20px -20px 20px -20px;
+    padding: 15px;
+  }
+
+  .formulario-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .formulario-header p {
+    font-size: 0.9rem;
+  }
+
+  .campo label {
+    font-size: 0.9rem;
+  }
+
+  .campo input[type="text"],
+  .campo input[type="email"],
+  .campo input[type="tel"],
+  .campo input[type="date"],
+  select {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .secao-plano h3,
+  .secao-pagamento h3 {
+    font-size: 1rem;
+  }
+
+  .opcoes-plano {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .plano-card {
+    padding: 12px;
+  }
+
+  .plano-nome {
+    font-size: 0.95rem;
+  }
+
+  .plano-preco {
+    font-size: 1.2rem;
+  }
+
+  .botao-enviar {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.85rem;
+    padding: 0.8rem 10px;
+  }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BNQ Esportes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+
+<body>
+    <header>
+        <div class="w3-container">
+            <div class="logo">
+                <img src="imagens/BNQEsporte-logo.png" alt="Logo Site BNQ Esportes">
+                <div>
+                    <h1>BNQ Esportes</h1>
+                    <p>Tudo Sobre o Brasileirão e NBA</p>
+                </div>
+                <div class="navbar">
+                    <a href="homepage.html">Início</a>
+                    <a href="tabelaBR.html">Brasileirão</a>
+                    <a href="tabelaNBA.html">NBA</a>
+                    <a href="formulario.html">Seja Membro !</a>
+                </div>
+            </div>
+    </header>
+        <div class="main-container">
+        <section class="secao-formulario">
+            <div class="container-formulario">
+                <div class="formulario-header">
+                    <h2>Bem-vindo ao FÃ-BNQ</h2>
+                    <p>Preencha o formulário abaixo para se tornar membro e acessar conteúdo exclusivo</p>
+                </div>
+
+                <form class="formulario-inscricao" onsubmit="handleSubmit(event)">
+                    <div class="grupo-campos">
+                        <div class="campo">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                        </div>
+                        <div class="campo">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
+                        </div>
+                    </div>
+
+                    <div class="grupo-campos">
+                        <div class="campo">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required placeholder="(17) 99999-9999">
+                        </div>
+                        <div class="campo">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data-nascimento">Data de Nascimento</label>
+                        <input type="date" id="data-nascimento" name="data-nascimento" required>
+                    </div>
+
+                    <div class="secao-plano">
+                        <h3>Escolha seu Plano</h3>
+                        <div class="opcoes-plano">
+                            <label class="plano-opcao">
+                                <input type="radio" name="plano" value="mensal" checked>
+                                <div class="plano-card">
+                                    <span class="plano-nome">Mensal</span>
+                                    <span class="plano-preco">R$ 29,90</span>
+                                    <span class="plano-periodo">/mês</span>
+                                </div>
+                            </label>
+                            <label class="plano-opcao">
+                                <input type="radio" name="plano" value="trimestral">
+                                <div class="plano-card">
+                                    <span class="plano-nome">Trimestral</span>
+                                    <span class="plano-preco">R$ 79,90</span>
+                                    <span class="plano-periodo">/3 meses</span>
+                                </div>
+                            </label>
+                            <label class="plano-opcao">
+                                <input type="radio" name="plano" value="anual">
+                                <div class="plano-card plano-destaque">
+                                    <span class="etiqueta-desconto">Economize 20%</span>
+                                    <span class="plano-nome">Anual</span>
+                                    <span class="plano-preco">R$ 287,90</span>
+                                    <span class="plano-periodo">/ano</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="secao-pagamento">
+                        <h3>Método de Pagamento</h3>
+                        <div class="opcoes-pagamento">
+                            <label class="pagamento-opcao">
+                                <input type="radio" name="pagamento" value="cartao" checked>
+                                <span>Cartão de Crédito</span>
+                            </label>
+                            <label class="pagamento-opcao">
+                                <input type="radio" name="pagamento" value="pix">
+                                <span>PIX</span>
+                            </label>
+                            <label class="pagamento-opcao">
+                                <input type="radio" name="pagamento" value="boleto">
+                                <span>Boleto Bancário</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="campo campo-checkbox">
+                        <input type="checkbox" id="termos" name="termos" required>
+                        <label for="termos">Concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a></label>
+                    </div>
+
+                    <div class="campo campo-checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Desejo receber novidades e ofertas exclusivas por email</label>
+                    </div>
+
+                    <button type="submit" class="botao-enviar">Completar Inscrição</button>
+                </form>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="w3-container">
+            <p>📧 contato@bnqesportes.com.br</p>
+            <p>&copy; 2025 BNQ Esportes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
