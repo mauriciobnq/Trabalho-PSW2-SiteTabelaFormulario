@@ -34,7 +34,7 @@
                     <p>Preencha o formulário abaixo para se tornar membro e acessar conteúdo exclusivo</p>
                 </div>
 
-                <form class="formulario-inscricao" onsubmit="handleSubmit(event)">
+                <form class="formulario-inscricao" id="formInscricao">
                     <div class="grupo-campos">
                         <div class="campo">
                             <label for="nome">Nome Completo</label>
@@ -62,11 +62,12 @@
                         <input type="date" id="data-nascimento" name="data-nascimento" required>
                     </div>
 
+                        <!-- plano -->
                     <div class="secao-plano">
                         <h3>Escolha seu Plano</h3>
                         <div class="opcoes-plano">
                             <label class="plano-opcao">
-                                <input type="radio" name="plano" value="mensal" checked>
+                                <input type="radio" name="plano" checked>
                                 <div class="plano-card">
                                     <span class="plano-nome">Mensal</span>
                                     <span class="plano-preco">R$ 29,90</span>
@@ -74,7 +75,7 @@
                                 </div>
                             </label>
                             <label class="plano-opcao">
-                                <input type="radio" name="plano" value="trimestral">
+                                <input type="radio" name="plano">
                                 <div class="plano-card">
                                     <span class="plano-nome">Trimestral</span>
                                     <span class="plano-preco">R$ 79,90</span>
@@ -82,7 +83,7 @@
                                 </div>
                             </label>
                             <label class="plano-opcao">
-                                <input type="radio" name="plano" value="anual">
+                                <input type="radio" name="plano">
                                 <div class="plano-card plano-destaque">
                                     <span class="etiqueta-desconto">Economize 20%</span>
                                     <span class="plano-nome">Anual</span>
@@ -92,20 +93,20 @@
                             </label>
                         </div>
                     </div>
-
+                    <!-- pagamento -->
                     <div class="secao-pagamento">
                         <h3>Método de Pagamento</h3>
                         <div class="opcoes-pagamento">
                             <label class="pagamento-opcao">
-                                <input type="radio" name="pagamento" value="cartao" checked>
+                                <input type="radio" name="pagamento" checked>
                                 <span>Cartão de Crédito</span>
                             </label>
                             <label class="pagamento-opcao">
-                                <input type="radio" name="pagamento" value="pix">
+                                <input type="radio" name="pagamento" >
                                 <span>PIX</span>
                             </label>
                             <label class="pagamento-opcao">
-                                <input type="radio" name="pagamento" value="boleto">
+                                <input type="radio" name="pagamento" >
                                 <span>Boleto Bancário</span>
                             </label>
                         </div>
@@ -120,12 +121,23 @@
                         <input type="checkbox" id="newsletter" name="newsletter">
                         <label for="newsletter">Desejo receber novidades e ofertas exclusivas por email</label>
                     </div>
-
-                    <button type="submit" class="botao-enviar">Completar Inscrição</button>
+                    <button type="submit" class="botao-enviar" id="botaoform">Completar Inscrição</button>
                 </form>
             </div>
         </section>
     </div>
+    
+    <!-- alert para confirmação -->
+        <script>
+            const botaoform = document.getElementById('botaoform');
+            const formulario = document.getElementById('formInscricao');
+
+            botaoform.addEventListener('click', function () {
+                if (formulario.checkValidity()) {
+                    alert("Cadastro Concluido !!\nInstruções enviadas no email cadastrado.");
+                }
+            });
+        </script>
     <footer>
         <div class="w3-container">
             <p>📧 contato@bnqesportes.com.br</p>
@@ -133,6 +145,5 @@
         </div>
     </footer>
 </body>
-
 
 </html>

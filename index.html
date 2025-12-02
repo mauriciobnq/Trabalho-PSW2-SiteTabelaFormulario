@@ -26,12 +26,35 @@
                     <a href="formulario.html">Seja Membro !</a>
                 </div>
             </div>
+        </div>
     </header>
 
-    <!-- banner -->
+    <!-- carrossel -->
     <div class="main-container">
-        <section class="banner">
-            <button class="botao-inv" onclick="window.location.href='index.html'"></button>
+        <section class="carrossel-container">
+            <div class="carrossel">
+                <div class="slide fade">
+                    <img src="imagens/brasileirao-logo.jpg" alt="Brasileirão" onclick="window.location.href='tabelaBR.html'" class="slide-img">
+                    <div class="slide-text">Brasileirão</div>
+                </div>
+                <div class="slide fade">
+                    <img src="imagens/nbalogof.jpg" alt="NBA" onclick="window.location.href='tabelaNBA.html'" class="slide-img">
+                    <div class="slide-text">NBA</div>
+                </div>
+                <div class="slide fade">
+                    <img src="imagens/fabnq-clube.png" alt="Fã-BNQ Clube" onclick="window.location.href='formulario.html'" class="slide-img">
+                    <div class="slide-text">Fã-BNQ Club</div>
+                </div>
+            </div>
+
+            <button class="carrossel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="carrossel-btn next" onclick="changeSlide(1)">&#10095;</button>
+
+            <div class="carrossel-dots">
+                <span class="dot" onclick="currentSlide(0)"></span>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+            </div>
         </section>
 
         <!-- card de noticias -->
@@ -40,23 +63,23 @@
                 <h2>Notícias em Destaque</h2>
                 <div class="artigos-grid">
                     <article class="artigo-card">
-                        <img src="imagens/br-noticia.png" alt="Notícia Brasileirão">
+                        <img src="imagens/flamengo-sport.webp" alt="Notícia Brasileirão">
                         <div class="artigo-info">
                             <span class="categoria">Brasileirão</span>
-                            <h3>Flamengo vence o Palmeiras e assume liderança do campeonato</h3>
-                            <p class="data">12 de Novembro de 2025</p>
-                            <p class="descricao">Em uma partida emocionante no Maracanã, o Flamengo conquistou uma vitória crucial contra o Palmeiras por 2-1, assumindo a liderança do Brasileirão com 48 pontos. Gols de Bruno Henrique e Arrascaeta decidiram a partida.</p>
-                            <a href="#" class="btn-primary">Ler Mais</a>
+                            <h3>Flamengo assume a liderança do Brasileiro a cinco rodadas do fim</h3>
+                            <p class="data">15 de Novembro de 2025</p>
+                            <p class="descricao">Time vence o Sport e conta com derrota do Palmeiras para voltar à ponta da tabela</p>
+                            <a href="https://ge.globo.com/futebol/times/flamengo/noticia/2025/11/15/flamengo-assume-a-lideranca-do-brasileiro-a-cinco-rodadas-do-fim.ghtml" class="btn-primary">Ler Mais</a>
                         </div>
                     </article>
                     <article class="artigo-card">
                         <img src="imagens/LOS-ANGELES-LAKERS-x-BOSTON-CELTICS.webp" alt="Notícia NBA">
                         <div class="artigo-info">
                             <span class="categoria">NBA</span>
-                            <h3>Lakers conseguem vitória espetacular contra Celtics na NBA</h3>
+                            <h3>Lakers é derrotado pelo Celtics, tem série quebrada e perde LeBron por lesão</h3>
                             <p class="data">11 de Novembro de 2025</p>
-                            <p class="descricao">O Los Angeles Lakers derrotou o Boston Celtics com um placar de 118-115 em jogo emocionante. LeBron James marcou 32 pontos e garantiu a vitória com uma bandeja nos últimos segundos da partida, mantendo o Lakers na luta pelo título.</p>
-                            <a href="#" class="btn-primary">Ler Mais</a>
+                            <p class="descricao">Astro deixa quadra no último quarto com lesão no músculo adutor; Jayson Tatum e Jaylen Brown somam 71 pontos e dão quarta vitória consecutiva ao Boston Celtics</p>
+                            <a href="https://ge.globo.com/basquete/nba/noticia/2025/03/09/lakers-e-derrotado-pelo-celtics-tem-serie-quebrada-e-perde-lebron-por-lesao.ghtml" class="btn-primary">Ler Mais</a>
                         </div>
                     </article>
                 </div>
@@ -94,7 +117,52 @@
             <p>&copy; 2025 BNQ Esportes. Todos os direitos reservados.</p>
         </div>
     </footer>
-</body>
 
+    <!-- script carrossel -->
+    <script>
+        let slideIndex = 0;
+        let autoSlideTimer;
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+            resetAutoSlide();
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+            resetAutoSlide();
+        }
+
+        function showSlides(n) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[slideIndex].classList.add('active');
+            dots[slideIndex].classList.add('active');
+        }
+
+        function autoSlide() {
+            changeSlide(1);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideTimer);
+            autoSlideTimer = setInterval(autoSlide, 5000);
+        }
+
+        showSlides(slideIndex);
+        autoSlideTimer = setInterval(autoSlide, 5000);
+    </script>
+</body>
 
 </html>
