@@ -822,7 +822,7 @@ select:focus {
   color: #cc8425;
 }
 
-/* Botão de envio */
+/* botão de envio */
 .botao-enviar {
   background: linear-gradient(135deg, #000000 0%, #cc8425 100%);
   color: white;
